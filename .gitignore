@@ -1,0 +1,7 @@
+/node_modules
+# .env
+*.log
+/certificates
+/cobie_files
+/ifc_files
+/logs_files

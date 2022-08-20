@@ -12,8 +12,7 @@ import { streamsToCompressed } from '../utils/azure_utilities.js';
 import { BlobServiceClient } from '@azure/storage-blob';
 import { unsubscribeTopic } from '../utils/mqtt_utilities.js';
 
-const AZURE_STORAGE_CONNECTION_STRING =
-  "DefaultEndpointsProtocol=https;AccountName=certificatedownload;AccountKey=s6BN+yog96WvmceMe4psCsIE2YOuuus9hLMWa6TRyNLycFuBCMCJksgWXSInE1eC9xn7xCebuGoR+ASt5Prp4g==;EndpointSuffix=core.windows.net";
+const AZURE_STORAGE_CONNECTION_STRING =process.env.AZURE_STORAGE_CONNECTION
 
 const blobServiceClient = BlobServiceClient.fromConnectionString(
   AZURE_STORAGE_CONNECTION_STRING

@@ -1,7 +1,6 @@
 import { BlobServiceClient } from "@azure/storage-blob";
 
-const AZURE_STORAGE_CONNECTION_STRING =
-  "DefaultEndpointsProtocol=https;AccountName=certificatedownload;AccountKey=s6BN+yog96WvmceMe4psCsIE2YOuuus9hLMWa6TRyNLycFuBCMCJksgWXSInE1eC9xn7xCebuGoR+ASt5Prp4g==;EndpointSuffix=core.windows.net";
+const AZURE_STORAGE_CONNECTION_STRING =process.env.AZURE_STORAGE_CONNECTION
 
 export const uploadFileToAzure = async (container,filesInfo) => {
  return new Promise(async (resolve,reject)=>{
